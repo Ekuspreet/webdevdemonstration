@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demonstration</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Set background color and font styles */
+      body {
+        background: linear-gradient(135deg, #ece9e6 25%, #ffffff 75%);
+        font-family: "Arial", sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Container styles */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Header styles */
+      .header {
+        background-color: #f5f5f5;
+        padding: 40px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #5a67d8;
+      }
+
+      .header h2 {
+        font-size: 1.75rem;
+        margin-bottom: 5px;
+        color: #2d3748;
+      }
+
+      .name {
+        color: #e53e3e;
+        font-weight: bold;
+      }
+
+      .header p {
+        font-size: 1.25rem;
+        color: #4a5568;
+      }
+
+      /* Main section styles */
+      .main {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        
+      }
+
+      .main p {
+        font-size: 1.2rem;
+        color: #2d3748;
+        margin-top: 10px;
+    }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .header h2 {
+          font-size: 1.5rem;
+        }
+
+        .main p {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 1.75rem;
+        }
+
+        .header h2 {
+          font-size: 1.25rem;
+        }
+
+        .main p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Welcome to Ekus's Home</h1>
+        <h2>Your name is <span class="name"><%= name %></span></h2>
+        <p>We hope you enjoy your visit!</p>
+      </div>
+      <div class="main">
+        <p>
+          Your IP address [
+          <span class="material-symbols-outlined"> alternate_email </span>
+          ] is <span class="name"> <%= ipAddress %></span>
+        </p>
+        <p>
+          Your Browser is [
+          <span class="material-symbols-outlined"> travel_explore </span>
+          ] 
+          <br>
+          <span class="name"><%= visitor %></span>
+        </p>
+        <p>
+           My Home is [  
+           <span class="material-symbols-outlined">
+            home
+            </span>
+           ] <span class="name">
+
+            <%= serverIpAddress %>
+           </span>
+        </p>
+      </div>
+      <div class="main">
+        <p>
+          Did you know that you can access resources hosted on a PC within your
+          local network? Simply connect to the PC's IP address or hostname and
+          enjoy seamless access to files, websites, and other shared resources!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
